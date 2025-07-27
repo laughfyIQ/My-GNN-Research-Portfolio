@@ -6,6 +6,10 @@
 摘要—在复杂网络中识别关键节点是一项具有挑战性的任务，需在效率、准确性与冗余消除之间取得平衡。为此，本文提出了一种基于图神经网络的两阶段归纳式影响力最大化框架 TIG-IM。第一阶段中，构建多任务学习的全局评分器，利用图注意力网络（GAT）同时预测SIR传播得分与我们新提出的三维桥接中介中心性，以高效筛选跨社区桥接节点构成候选集。第二阶段中，引入融合度惩罚与多样性正则项的局部选择器，在候选子图上进行再排序，生成结构分散且传播能力互补的最终种子集。理论分析证明评分器满足单调性，其局部损失函数可视为最大后验估计（MAP）。该框架具备近线性时间复杂度 𝑂(𝑛+𝑚)。在九个不同领域的真实网络上进行的实验结果表明，TIG-IM在传播效果和计算效率方面显著优于多种先进方法。消融实验进一步验证了三大核心模块（3D桥接中心性、度惩罚、多样性重排序）间的协同增益。
 </p>
 
+<div align="center">
+  <img src="fig2.png" alt="TIG-IM Framework Diagram" width="100%">
+  <p><em>Figure 1: Architecture of the TIG-IM framework, illustrating the two-stage process.</em></p>
+</div>
 ---
 
 <table>
@@ -45,19 +49,10 @@
 
 为了验证我们模型的性能和泛化能力，我们在多个不同类型的真实世界网络上进行了影响力扩散实验。
 
-<table align="center">
-  <tr>
-    
-  </tr>
-  <tr>
-    <td>
-      <img src="https://github.com/user-attachments/assets/061f9344-ed49-4f89-b273-edea277a44d3" alt="SIR Performance on USAir97" width="100%">
-    </td>
-    <td>
-     <img src="https://github.com/user-attachments/assets/89be6ca0-d84e-467b-8bc7-8b533a252c5e" alt="Execution Time Comparison" width="100%">
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img src="fig4.png" alt="SIR Diffusion Curves " width="100%">
+  <p><em>Figure 2:SIR Diffusion Curves on Nine Real Networks Using Top-20 Selected Nodes by Different Methods.</em></p>
+</div>
 
 ---
 ---
