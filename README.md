@@ -35,9 +35,7 @@
   </tr>
 </table>
 </div>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/9941a562-0e61-4e66-af91-147554170a3a" alt="Top-K Node Visualization" width="10%">
-</p>
+
 
 ## 成果展示 (Results Showcase)
 
